@@ -1,82 +1,152 @@
 <!DOCTYPE html><html>
 <head>
-<title>Bright Future Coaching</title>
+<title>Arabinda Coaching Classes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 body {
     margin: 0;
-    font-family: Arial;
-    background: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fb;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #16a34a, #22c55e);
-    color: white;
     text-align: center;
     padding: 60px 20px;
-}
-
-/* NAV */
-nav {
-    background: #15803d;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-/* SECTION */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-/* BOX */
-.box {
-    background: #f0fdf4;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 800px;
-    border-radius: 10px;
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #16a34a;
-    color: white;
+    padding: 12px 25px;
+    background: white;
+    color: #2563eb;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* SECTION */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* BOX */
+.box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* FORM */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* SUBMIT */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.call {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
 }
 </style></head><body><header>
-    <h1>Bright Future Coaching</h1>
-    <p>Best Coaching for Class 8–12</p>
-</header><nav>
-    <a href="#">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#contact">Contact</a>
-</nav><section>
-    <h2>About Us</h2>
-    <div class="box">
-        We provide quality education for students with experienced teachers and best study materials.
-    </div>
-</section><section id="courses">
-    <h2>Our Courses</h2>
-    <div class="box">✔ Class 8–10 All Subjects</div>
-    <div class="box">✔ Class 11–12 Science & Commerce</div>
-    <div class="box">✔ Competitive Exam Preparation</div>
-</section><section id="contact">
-    <h2>Contact</h2>
-    <div class="box">
-        📍 City <br>
-        📞 9870000000 <br><br>
-        <a href="https://wa.me/919876543210" class="btn">Join Now</a>
-    </div>
-</section></body>
-  </html>
+<h1>Arabinda Coaching Classes</h1>
+<p>Class 6–12 | Quality Education | Affordable Fees</p>
+<a href="tel:+919932864759" class="btn">📞 Call Now</a>
+</header><section><h2>Subjects</h2>
+<div class="box">
+<p>✔ Mathematics</p>
+<p>✔ Science</p>
+<p>✔ English</p>
+<p>✔ Computer</p>
+</div><h2>Class Timing</h2>
+<div class="box">
+<p>Morning: 7:00 AM – 9:00 AM</p>
+<p>Evening: 4:00 PM – 7:00 PM</p>
+</div><h2>What You Will Learn</h2>
+<div class="box">
+<p>✔ Strong Concepts</p>
+<p>✔ Daily Practice</p>
+<p>✔ Doubt Clearing</p>
+<p>✔ Exam Preparation</p>
+</div><h2>Exam System</h2>
+<div class="box">
+<p>✔ Weekly Test</p>
+<p>✔ Monthly Exam</p>
+<p>✔ Board Preparation</p>
+</div><h2>Student Admission Form</h2><div class="box">
+<form onsubmit="sendToWhatsApp(); return false;"><input type="text" id="name" placeholder="Student Name" required><select id="class" required>
+<option value="">Select Class</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select><input type="text" id="subject" placeholder="Subject Interested" required><input type="text" id="phone" placeholder="Phone Number" required><button type="submit">Submit Admission</button>
+
+</form>
+</div><h2>Contact</h2>
+<div class="box">
+<p>📞 +91 99328 64759</p>
+<p>📍 Your Area Name</p>
+</div></section><!-- FLOAT BUTTONS --><a href="https://wa.me/919932864759" class="whatsapp">💬</a>
+<a href="tel:+919932864759" class="call">📞</a>
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var studentClass = document.getElementById("class").value;
+    var subject = document.getElementById("subject").value;
+    var phone = document.getElementById("phone").value;
+
+    var message = "New Admission:%0A"
+        + "Name: " + name + "%0A"
+        + "Class: " + studentClass + "%0A"
+        + "Subject: " + subject + "%0A"
+        + "Phone: " + phone;
+
+    var url = "https://wa.me/919932864759?text=" + message;
+
+    window.open(url, "_blank");
+}
+</script></body>
+    </html>
