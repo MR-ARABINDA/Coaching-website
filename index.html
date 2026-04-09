@@ -1,152 +1,139 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
-<title>Arabinda Coaching Classes</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fb;
-}
+  <title>Rocky Coaching Classes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+    }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    color: white;
-}
+    header {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: white;
-    color: #2563eb;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
+    nav {
+      text-align: center;
+      background: #1e293b;
+      padding: 10px;
+    }
 
-/* SECTION */
-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-}
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-/* BOX */
-.box {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
+    section {
+      padding: 30px;
+      text-align: center;
+    }
 
-/* FORM */
-input, select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+    }
 
-/* SUBMIT */
-button {
-    width: 100%;
-    padding: 12px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-}
+    input, select {
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+      border-radius: 5px;
+      border: none;
+    }
 
-/* FLOAT BUTTONS */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-}
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
 
-.call {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: #2563eb;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-}
-</style></head><body><header>
-<h1>Arabinda Coaching Classes</h1>
-<p>Class 6–12 | Quality Education | Affordable Fees</p>
-<a href="tel:+919932864759" class="btn">📞 Call Now</a>
-</header><section><h2>Subjects</h2>
-<div class="box">
-<p>✔ Mathematics</p>
-<p>✔ Science</p>
-<p>✔ English</p>
-<p>✔ Computer</p>
-</div><h2>Class Timing</h2>
-<div class="box">
-<p>Morning: 7:00 AM – 9:00 AM</p>
-<p>Evening: 4:00 PM – 7:00 PM</p>
-</div><h2>What You Will Learn</h2>
-<div class="box">
-<p>✔ Strong Concepts</p>
-<p>✔ Daily Practice</p>
-<p>✔ Doubt Clearing</p>
-<p>✔ Exam Preparation</p>
-</div><h2>Exam System</h2>
-<div class="box">
-<p>✔ Weekly Test</p>
-<p>✔ Monthly Exam</p>
-<p>✔ Board Preparation</p>
-</div><h2>Student Admission Form</h2><div class="box">
-<form onsubmit="sendToWhatsApp(); return false;"><input type="text" id="name" placeholder="Student Name" required><select id="class" required>
-<option value="">Select Class</option>
-<option>6</option>
-<option>7</option>
-<option>8</option>
-<option>9</option>
-<option>10</option>
-<option>11</option>
-<option>12</option>
-</select><input type="text" id="subject" placeholder="Subject Interested" required><input type="text" id="phone" placeholder="Phone Number" required><button type="submit">Submit Admission</button>
+    footer {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 
-</form>
-</div><h2>Contact</h2>
-<div class="box">
-<p>📞 +91 99328 64759</p>
-<p>📍 Your Area Name</p>
-</div></section><!-- FLOAT BUTTONS --><a href="https://wa.me/919932864759" class="whatsapp">💬</a>
-<a href="tel:+919932864759" class="call">📞</a>
+<body>
 
-<script>
-function sendToWhatsApp() {
-    var name = document.getElementById("name").value;
-    var studentClass = document.getElementById("class").value;
-    var subject = document.getElementById("subject").value;
-    var phone = document.getElementById("phone").value;
+<header>
+  Rocky Coaching Classes
+</header>
 
-    var message = "New Admission:%0A"
-        + "Name: " + name + "%0A"
-        + "Class: " + studentClass + "%0A"
-        + "Subject: " + subject + "%0A"
-        + "Phone: " + phone;
+<nav>
+  <a href="#home">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="#admission">Admission</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    var url = "https://wa.me/919932864759?text=" + message;
+<section id="home">
+  <h1>Welcome Students 🎓</h1>
+  <p>Best Coaching for School Exams & Competitive Preparation</p>
+</section>
 
-    window.open(url, "_blank");
-}
-</script></body>
-    </html>
+<section id="courses">
+  <h2>Our Courses</h2>
+
+  <div class="card">
+    <h3>Class 8 - 10</h3>
+    <p>Math, Science, English</p>
+  </div>
+
+  <div class="card">
+    <h3>Class 11 - 12</h3>
+    <p>Physics, Chemistry, Math</p>
+  </div>
+
+</section>
+
+<section id="admission">
+  <h2>Admission Form</h2>
+
+  <form>
+    <input type="text" placeholder="Full Name" required><br>
+    <input type="tel" placeholder="Phone Number" required><br>
+
+    <select required>
+      <option>Select Class</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select><br>
+
+    <button type="submit">Apply Now</button>
+  </form>
+
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: +91 XXXXX XXXXX</p>
+  <p>Email: coaching@email.com</p>
+</section>
+
+<footer>
+  © 2026 Rocky Coaching Classes
+</footer>
+
+</body>
+</html>
