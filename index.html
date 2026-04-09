@@ -1,22 +1,22 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html><html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arabinda Coaching Classes</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f5f7fb;
 }
 
-/* HEADER */
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
 }
 
-/* BUTTON */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -28,14 +28,12 @@ header {
     margin-top: 10px;
 }
 
-/* SECTION */
 section {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* BOX */
 .box {
     background: white;
     padding: 20px;
@@ -44,8 +42,13 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* FORM */
-input, select {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+input, select, textarea {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -53,7 +56,6 @@ input, select {
     border: 1px solid #ccc;
 }
 
-/* SUBMIT */
 button {
     width: 100%;
     padding: 12px;
@@ -64,89 +66,106 @@ button {
     font-size: 16px;
 }
 
-/* FLOAT BUTTONS */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
+.review {
+    font-style: italic;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
     color: white;
+}
+
+.whatsapp, .call {
+    position: fixed;
+    right: 20px;
     padding: 15px;
     border-radius: 50%;
+    color: white;
     text-decoration: none;
 }
 
-.call {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: #2563eb;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
+.whatsapp { bottom: 20px; background: #25D366; }
+.call { bottom: 80px; background: #2563eb; }
+
+.success {
+    display: none;
+    color: green;
+    text-align: center;
+    margin-top: 10px;
 }
 </style></head><body><header>
 <h1>Arabinda Coaching Classes</h1>
 <p>Class 6–12 | Quality Education | Affordable Fees</p>
 <a href="tel:+919932864759" class="btn">📞 Call Now</a>
 </header><section><h2>Subjects</h2>
+<div class="grid">
+<div class="box">Mathematics</div>
+<div class="box">Science</div>
+<div class="box">English</div>
+<div class="box">Computer</div>
+</div><h2>Fees Inquiry</h2>
 <div class="box">
-<p>✔ Mathematics</p>
-<p>✔ Science</p>
-<p>✔ English</p>
-<p>✔ Computer</p>
-</div><h2>Class Timing</h2>
+<p>Fees will be informed personally by the teacher after admission inquiry.</p>
+<p>👉 Please fill the form below or contact directly.</p>
+</div><h2>Why Choose Us</h2>
+<div class="grid">
+<div class="box">✔ Experienced Teacher</div>
+<div class="box">✔ Small Batches</div>
+<div class="box">✔ Weekly Tests</div>
+<div class="box">✔ Personal Attention</div>
+</div><h2>Student Reviews</h2>
+<div class="box review">"Best coaching in the area!"</div>
+<div class="box review">"My marks improved a lot!"</div><h2>Admission Form</h2>
 <div class="box">
-<p>Morning: 7:00 AM – 9:00 AM</p>
-<p>Evening: 4:00 PM – 7:00 PM</p>
-</div><h2>What You Will Learn</h2>
-<div class="box">
-<p>✔ Strong Concepts</p>
-<p>✔ Daily Practice</p>
-<p>✔ Doubt Clearing</p>
-<p>✔ Exam Preparation</p>
-</div><h2>Exam System</h2>
-<div class="box">
-<p>✔ Weekly Test</p>
-<p>✔ Monthly Exam</p>
-<p>✔ Board Preparation</p>
-</div><h2>Student Admission Form</h2><div class="box">
-<form onsubmit="sendToWhatsApp(); return false;"><input type="text" id="name" placeholder="Student Name" required><select id="class" required>
+<form onsubmit="sendToWhatsApp(); return false;"><h3>Student Information</h3>
+<input type="text" id="name" placeholder="Student Name" required>
+<input type="number" id="age" placeholder="Age" required>
+<select id="class" required>
 <option value="">Select Class</option>
-<option>6</option>
-<option>7</option>
-<option>8</option>
-<option>9</option>
-<option>10</option>
-<option>11</option>
-<option>12</option>
-</select><input type="text" id="subject" placeholder="Subject Interested" required><input type="text" id="phone" placeholder="Phone Number" required><button type="submit">Submit Admission</button>
+<option>6</option><option>7</option><option>8</option>
+<option>9</option><option>10</option>
+<option>11</option><option>12</option>
+</select>
+<input type="text" id="subject" placeholder="Subject Interested" required><h3>Guardian Information</h3>
+<input type="text" id="guardian" placeholder="Guardian Name" required>
+<input type="text" id="guardianPhone" placeholder="Guardian Phone" required><h3>Address</h3>
+<textarea id="address" placeholder="Full Address (Surulia Area)" required></textarea><button type="submit">Submit Admission</button>
 
-</form>
+<p class="success" id="successMsg">Form submitted successfully!</p></form>
 </div><h2>Contact</h2>
 <div class="box">
 <p>📞 +91 99328 64759</p>
-<p>📍 Your Area Name</p>
-</div></section><!-- FLOAT BUTTONS --><a href="https://wa.me/919932864759" class="whatsapp">💬</a>
-<a href="tel:+919932864759" class="call">📞</a>
+<p>📍 Surulia, West Bengal</p>
+</div></section><footer>
+<p>© 2026 Arabinda Coaching Classes</p>
+</footer><a href="https://wa.me/919932864759" class="whatsapp">💬</a> <a href="tel:+919932864759" class="call">📞</a>
 
 <script>
 function sendToWhatsApp() {
     var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
     var studentClass = document.getElementById("class").value;
     var subject = document.getElementById("subject").value;
-    var phone = document.getElementById("phone").value;
+    var guardian = document.getElementById("guardian").value;
+    var guardianPhone = document.getElementById("guardianPhone").value;
+    var address = document.getElementById("address").value;
 
     var message = "New Admission:%0A"
         + "Name: " + name + "%0A"
+        + "Age: " + age + "%0A"
         + "Class: " + studentClass + "%0A"
         + "Subject: " + subject + "%0A"
-        + "Phone: " + phone;
+        + "Guardian: " + guardian + "%0A"
+        + "Guardian Phone: " + guardianPhone + "%0A"
+        + "Address: " + address;
 
     var url = "https://wa.me/919932864759?text=" + message;
-
     window.open(url, "_blank");
+
+    document.getElementById("successMsg").style.display = "block";
 }
 </script></body>
-    </html>
+</html>
